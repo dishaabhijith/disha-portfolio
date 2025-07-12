@@ -1,26 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/context/ThemeContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Background from '@/components/Background';
-
-// Poppins font for headings
-const poppins = Poppins({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
-
-// Inter font for body text
-const inter = Inter({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
+import { dmSans } from './fonts';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Disha A | Portfolio",
@@ -34,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${dmSans.variable}`} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
       </head>
@@ -49,6 +34,7 @@ export default function RootLayout({
             <Footer />
           </>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

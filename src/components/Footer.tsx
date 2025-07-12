@@ -42,17 +42,17 @@ export default function Footer() {
                 Information Science & Engineering Student passionate about building software solutions with modern technologies.
               </p>
               
-              {/* Social links */}
-              <div className="flex space-x-4 mb-8 md:mb-0">
+              {/* Social links - removed circular backgrounds */}
+              <div className="flex space-x-6 mb-8 md:mb-0">
                 <motion.a
                   href="https://github.com/dishaabhijith"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-pink-900/30 dark:hover:text-pink-400 transition-all"
+                  className="flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all"
                 >
-                  <FaGithub size={18} />
+                  <FaGithub size={20} />
                 </motion.a>
                 
                 <motion.a
@@ -61,9 +61,9 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-pink-900/30 dark:hover:text-pink-400 transition-all"
+                  className="flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all"
                 >
-                  <FaLinkedin size={18} />
+                  <FaLinkedin size={20} />
                 </motion.a>
                 
                 <motion.a
@@ -72,18 +72,18 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-pink-900/30 dark:hover:text-pink-400 transition-all"
+                  className="flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all"
                 >
-                  <FaXTwitter size={18} />
+                  <FaXTwitter size={20} />
                 </motion.a>
                 
                 <motion.a
                   href="mailto:disha.a.docs@gmail.com"
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-pink-900/30 dark:hover:text-pink-400 transition-all"
+                  className="flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all"
                 >
-                  <FaEnvelope size={18} />
+                  <FaEnvelope size={20} />
                 </motion.a>
               </div>
             </div>

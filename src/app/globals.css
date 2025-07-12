@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DM Sans font application site-wide */
+html * {
+  font-family: var(--font-dm-sans), system-ui, sans-serif !important;
+}
+
 /* Performance optimizations - disable smooth scrolling completely */
 html, body {
   overflow-x: hidden;
@@ -11,6 +16,16 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   scroll-behavior: auto !important; /* Force disable smooth scrolling */
+}
+
+/* Typewriter cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
 
 /* Force hardware acceleration for all animated elements */
@@ -45,7 +60,7 @@ body {
       rgb(var(--background-start-rgb)),
       rgb(var(--background-end-rgb))
     );
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: var(--font-dm-sans), Arial, sans-serif;
   /* Allow transitions for theme changes */
   transition: background-color 0.3s ease, color 0.3s ease;
 }

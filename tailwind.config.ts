@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },
       colors: {
         pink: {
@@ -100,16 +100,16 @@ const config: Config = {
               textDecoration: 'underline',
             },
             h1: {
-              fontFamily: 'var(--font-poppins)',
+              fontFamily: 'var(--font-dm-sans)',
               fontWeight: '700',
             },
             h2: {
-              fontFamily: 'var(--font-poppins)',
+              fontFamily: 'var(--font-dm-sans)',
               fontWeight: '600',
               marginTop: '2em',
             },
             h3: {
-              fontFamily: 'var(--font-poppins)',
+              fontFamily: 'var(--font-dm-sans)',
               fontWeight: '600',
               marginTop: '1.6em',
             },

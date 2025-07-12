@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
@@ -9,10 +9,56 @@ import React from 'react'; // Added missing import for React
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  
+  // Use useMemo to prevent the phrases array from causing re-renders
+  const phrases = useMemo(() => [
+    'Software Innovation Enthusiast',
+    'Machine Learning Developer',
+    'AI Researcher',
+    'Full Stack Developer',
+    'Creative Problem Solver',
+    'Tech Enthusiast'
+  ], []);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % phrases.length;
+      const fullText = phrases[i];
+      
+      setText(
+        isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1)
+      );
+      
+      // Adjust typing speed
+      if (isDeleting) {
+        setTypingSpeed(80); // Faster when deleting
+      } else {
+        setTypingSpeed(150); // Normal speed when typing
+      }
+      
+      // Logic for when to delete or move to next phrase
+      if (!isDeleting && text === fullText) {
+        // Wait at complete text
+        setTimeout(() => setIsDeleting(true), 1500);
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+    
+    const ticker = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(ticker);
+  }, [text, isDeleting, loopNum, typingSpeed, phrases]);
   
   if (!mounted) return null;
 
@@ -50,7 +96,7 @@ export default function HeroSection() {
     {
       name: "Instagram",
       icon: <FaInstagram size={22} />,
-      url: "https://instagram.com/dishaabhijith",
+      url: "https://instagram.com/disha_abhijith",
       gradientFrom: "#fa7e1e",
       gradientVia: "#d62976",
       gradientTo: "#962fbf",
@@ -94,9 +140,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl font-light text-gray-700 dark:text-gray-300 mb-6 md:mb-8"
+          className="text-xl md:text-2xl font-light text-gray-700 dark:text-gray-300 mb-6 md:mb-8 h-8 flex justify-center items-center"
         >
-          Software Innovation Enthusiast
+          <span>{text}</span>
+          <span className="border-r-2 border-pink-500 ml-1 h-6 animate-blink"></span>
         </motion.h2>
           
         <motion.p 

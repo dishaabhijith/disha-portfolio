@@ -70,7 +70,7 @@ const SocialLinks = () => {
     },
     { 
       icon: <FaInstagram size={20} />,
-      url: "https://instagram.com/dishaabhijith",
+      url: "https://instagram.com/disha_abhijith",
       label: "Instagram",
       hoverColor: "hover:text-[#E4405F]"
     },

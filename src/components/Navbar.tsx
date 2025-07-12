@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from '@/context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -60,7 +61,7 @@ export default function Navbar() {
           </Link>
             
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <ul className="flex space-x-6">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -83,6 +84,45 @@ export default function Navbar() {
               ))}
             </ul>
             
+            {/* Social Icons - Desktop */}
+            <div className="flex items-center space-x-4">
+              <motion.a
+                href="https://github.com/dishaabhijith"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
+              >
+                <FaGithub size={20} />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/disha2005"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
+              >
+                <FaLinkedin size={20} />
+              </motion.a>
+            </div>
+            
+            {/* Resume Button - Desktop */}
+            <motion.a
+              href="/Disha_A_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-600 to-violet-600 text-white font-medium shadow-md hover:shadow-lg transition-all text-sm flex items-center space-x-1"
+            >
+              <span>Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </motion.a>
+            
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -103,7 +143,44 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden space-x-4">
+          <div className="flex items-center md:hidden space-x-3">
+            {/* Social Icons - Mobile */}
+            <motion.a
+              href="https://github.com/dishaabhijith"
+              target="_blank" 
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
+            >
+              <FaGithub size={18} />
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/disha2005"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
+            >
+              <FaLinkedin size={18} />
+            </motion.a>
+            
+            {/* Resume Button - Mobile */}
+            <motion.a
+              href="/Disha_A_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-600 to-violet-600 text-white font-medium shadow-md text-xs flex items-center"
+            >
+              <span>Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </motion.a>
+            
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
@@ -145,7 +222,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Keep Social Links and Resume Button removed from here */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -178,6 +255,8 @@ export default function Navbar() {
                       </Link>
                     </motion.li>
                   ))}
+                  
+                  {/* Removed Social Icons and Resume Button from Mobile Menu */}
                 </ul>
               </nav>
             </div>
