@@ -33,7 +33,6 @@ export default function Navbar() {
     { name: 'Education', href: '/education' },
     { name: 'Experience', href: '/experience' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: '/contact' },
   ];
 
