@@ -123,7 +123,7 @@ export default function NotFoundPage() {
         >
           {/* Glitchy 404 text */}
           <motion.h1 
-            className="text-[12rem] md:text-[18rem] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-600 dark:from-pink-400 dark:to-violet-400"
+            className="text-[12rem] md:text-[18rem] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-600 dark:from-pink-400 dark:to-orange-400"
             animate={{
               x: glitchIntensity > 0.5 ? [0, -5, 5, -3, 0] : 0,
             }}
@@ -136,7 +136,7 @@ export default function NotFoundPage() {
           <div className={`absolute inset-0 ${glitchIntensity > 0.2 ? 'opacity-70' : 'opacity-0'} transition-opacity pointer-events-none`}>
             <div className="absolute left-[10%] top-[20%] w-[10px] h-[20px] bg-pink-500/80" />
             <div className="absolute left-[50%] top-[40%] w-[15px] h-[4px] bg-purple-500/80" />
-            <div className="absolute left-[80%] top-[30%] w-[20px] h-[8px] bg-violet-500/80" />
+            <div className="absolute left-[80%] top-[30%] w-[20px] h-[8px] bg-orange-500/80" />
           </div>
           
           {/* Error message that cycles */}
@@ -165,7 +165,7 @@ export default function NotFoundPage() {
                 href="/"
                 className="relative inline-flex items-center justify-center overflow-hidden rounded-full p-[2px] font-medium group"
               >
-                <span className="absolute inset-[-1000%] bg-gradient-to-r from-pink-500 via-violet-500 to-pink-500 animate-[spin_4s_linear_infinite]" />
+                <span className="absolute inset-[-1000%] bg-gradient-to-r from-pink-500 via-orange-500 to-pink-500 animate-[spin_4s_linear_infinite]" />
                 <span className="inline-flex items-center justify-center w-full h-full px-8 py-3 text-white transition-all duration-300 bg-pink-600 hover:bg-pink-700 rounded-full backdrop-blur-3xl group-hover:bg-opacity-90">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
@@ -184,7 +184,7 @@ export default function NotFoundPage() {
                 onClick={() => router.back()}
                 className="relative inline-flex items-center justify-center overflow-hidden rounded-full p-[2px] font-medium group"
               >
-                <span className="absolute inset-[-1000%] bg-gradient-to-r from-pink-300 via-indigo-400 to-violet-500 opacity-40 dark:opacity-20 animate-[spin_4s_linear_infinite]" />
+                <span className="absolute inset-[-1000%] bg-gradient-to-r from-pink-300 via-indigo-400 to-orange-500 opacity-40 dark:opacity-20 animate-[spin_4s_linear_infinite]" />
                 <span className="inline-flex items-center justify-center w-full h-full px-8 py-3 text-pink-600 dark:text-pink-400 transition-all duration-300 bg-white dark:bg-gray-900 rounded-full backdrop-blur-3xl group-hover:text-pink-500 group-hover:dark:text-pink-300 hover:bg-opacity-90">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
@@ -198,7 +198,7 @@ export default function NotFoundPage() {
       </main>
       
       {/* Easter egg element */}
-      <div className="fixed inset-0 bg-gradient-to-r from-pink-600 to-violet-600 z-50 flex items-center justify-center text-white text-4xl hidden easter-egg">
+      <div className="fixed inset-0 bg-gradient-to-r from-pink-600 to-orange-600 z-50 flex items-center justify-center text-white text-4xl hidden easter-egg">
         SYSTEM OVERLOAD
       </div>
       

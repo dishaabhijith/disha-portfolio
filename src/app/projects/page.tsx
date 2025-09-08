@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                 onClick={() => setFilter(category.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shadow-sm ${
                   filter === category.id 
-                    ? 'bg-gradient-to-r from-pink-600 to-violet-600 text-white shadow-pink-500/20'
+                    ? 'bg-gradient-to-r from-pink-600 to-orange-600 text-white shadow-pink-500/20'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-100 dark:border-gray-700'
                 }`}
                 whileHover={{ y: -2 }}
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
               className="glass hover-lift rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700/50 cursor-pointer"
               onClick={() => openModal(project)}
             >
-              <div className="aspect-video relative bg-gradient-to-br from-pink-50 to-violet-50 dark:from-pink-900/20 dark:to-violet-900/20 overflow-hidden">
+              <div className="aspect-video relative bg-gradient-to-br from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 overflow-hidden">
                 {project.image ? (
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
@@ -204,7 +204,7 @@ export default function ProjectsPage() {
                   {project.technologies.map((tech, index) => (
                     <motion.span 
                       key={index}
-                      className="px-2 py-1 bg-gradient-to-r from-pink-50 to-violet-50 dark:from-pink-900/20 dark:to-violet-900/20 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-gray-100/50 dark:border-gray-700/50"
+                      className="px-2 py-1 bg-gradient-to-r from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-gray-100/50 dark:border-gray-700/50"
                       whileHover={{ y: -2, scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                       onClick={(e) => e.stopPropagation()}

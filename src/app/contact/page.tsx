@@ -119,17 +119,17 @@ export default function ContactPage() {
               className="lg:col-span-3 glass dark:glass-dark rounded-xl overflow-hidden shadow-lg relative"
             >
               {/* Decorative top border */}
-              <div className="h-1.5 w-full bg-gradient-to-r from-pink-500 via-violet-500 to-pink-500"></div>
+              <div className="h-1.5 w-full bg-gradient-to-r from-pink-500 via-orange-500 to-pink-500"></div>
               
               <div className="p-8 md:p-10 relative">
                 {/* Subtle background decorations */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl -z-10"></div>
-                <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl -z-10"></div>
+                <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl -z-10"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Send a Message</h2>
-                    <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30"></div>
+                    <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30"></div>
                   </div>
                   
                   {submitStatus === 'success' && (
@@ -282,7 +282,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full py-3.5 px-6 bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 shadow-lg shadow-pink-600/20 hover:shadow-xl hover:shadow-pink-600/30"
+                        className="w-full py-3.5 px-6 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 shadow-lg shadow-pink-600/20 hover:shadow-xl hover:shadow-pink-600/30"
                       >
                         {isSubmitting ? (
                           <>
@@ -313,15 +313,15 @@ export default function ContactPage() {
             className="lg:col-span-2 flex flex-col gap-8"
           >
             <div className="glass dark:glass-dark rounded-xl overflow-hidden shadow-lg h-auto">
-              <div className="h-1.5 w-full bg-gradient-to-r from-violet-500 via-pink-500 to-violet-500"></div>
+              <div className="h-1.5 w-full bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500"></div>
               <div className="p-8 relative">
                 {/* Background decorations */}
-                <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl -z-10"></div>
+                <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl -z-10"></div>
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-8">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Contact Info</h2>
-                    <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30"></div>
+                    <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30"></div>
                   </div>
                   
                   <div className="space-y-8">
@@ -337,7 +337,7 @@ export default function ContactPage() {
                         <motion.div 
                           whileHover={{ rotate: [0, 10, -10, 0], scale: 1.1 }}
                           transition={{ duration: 0.6 }}
-                          className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-50 to-violet-50 dark:from-pink-900/30 dark:to-violet-900/30 text-pink-600 dark:text-pink-400 flex items-center justify-center flex-shrink-0 shadow-md shadow-pink-600/5 border border-pink-100/50 dark:border-pink-800/30"
+                          className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-50 to-orange-50 dark:from-pink-900/30 dark:to-orange-900/30 text-pink-600 dark:text-pink-400 flex items-center justify-center flex-shrink-0 shadow-md shadow-pink-600/5 border border-pink-100/50 dark:border-pink-800/30"
                         >
                           {item.icon}
                         </motion.div>
@@ -368,12 +368,12 @@ export default function ContactPage() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="glass dark:glass-dark rounded-xl overflow-hidden shadow-lg relative flex-1"
             >
-              <div className="p-8 h-full bg-gradient-to-br from-pink-50/70 to-violet-50/70 dark:from-pink-900/20 dark:to-violet-900/20 flex flex-col">
+              <div className="p-8 h-full bg-gradient-to-br from-pink-50/70 to-orange-50/70 dark:from-pink-900/20 dark:to-orange-900/20 flex flex-col">
                 {/* Background decorations */}
                                   <div className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl -z-10"></div>
                 
                 <div className="flex items-center mb-3">
-                  <div className="h-10 w-1.5 bg-gradient-to-b from-pink-500 to-violet-500 rounded-full mr-4"></div>
+                  <div className="h-10 w-1.5 bg-gradient-to-b from-pink-500 to-orange-500 rounded-full mr-4"></div>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">Let&apos;s Connect</h3>
                 </div>
                 

@@ -106,7 +106,7 @@ export default function AboutPage() {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-lg h-full">
-              <div className="aspect-square relative bg-gradient-to-br from-pink-100 via-purple-50 to-violet-100 dark:from-pink-900/30 dark:via-purple-900/20 dark:to-violet-900/30 flex items-center justify-center">
+              <div className="aspect-square relative bg-gradient-to-br from-pink-100 via-purple-50 to-orange-100 dark:from-pink-900/30 dark:via-purple-900/20 dark:to-orange-900/30 flex items-center justify-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
                 
                 {/* You can uncomment and add your image here */}
@@ -178,7 +178,7 @@ export default function AboutPage() {
             >
               Hello there!
               <motion.div 
-                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full"
+                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 0.8, duration: 0.8 }}
@@ -243,7 +243,7 @@ export default function AboutPage() {
         >
           <div className="flex items-center gap-4 mb-12">
             <h2 className="text-3xl font-bold gradient-text">My Skills</h2>
-            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30"></div>
+            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30"></div>
           </div>
           
           <motion.div
@@ -255,7 +255,7 @@ export default function AboutPage() {
           >
             {/* Background decorations */}
             <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl -z-10"></div>
-            <div className="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl -z-10"></div>
+            <div className="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl -z-10"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {Object.entries(skills).map(([category, skillsList], index) => (
@@ -266,16 +266,16 @@ export default function AboutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index, duration: 0.6 }}
                 >
-                  <div className="absolute -left-3 -top-3 w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-violet-500 opacity-70"></div>
+                  <div className="absolute -left-3 -top-3 w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 opacity-70"></div>
                   
-                  <h3 className="font-bold text-xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-600 pl-2">{category}</h3>
+                  <h3 className="font-bold text-xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-600 pl-2">{category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skillsList.map((skill) => (
                       <motion.span
                         key={skill}
                         whileHover={{ y: -3, scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                        className="px-4 py-2 bg-gradient-to-r from-pink-50 to-violet-50 dark:from-pink-900/20 dark:to-violet-900/20 text-gray-700 dark:text-gray-300 rounded-full text-sm border border-pink-100/50 dark:border-pink-800/30 shadow-sm"
+                        className="px-4 py-2 bg-gradient-to-r from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 text-gray-700 dark:text-gray-300 rounded-full text-sm border border-pink-100/50 dark:border-pink-800/30 shadow-sm"
                       >
                         {skill}
                       </motion.span>
@@ -296,7 +296,7 @@ export default function AboutPage() {
         >
           <div className="flex items-center gap-4 mb-12">
             <h2 className="text-3xl font-bold gradient-text">Education</h2>
-            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30"></div>
+            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30"></div>
             <Link 
               href="/education" 
               className="text-sm flex items-center gap-1.5 text-pink-600 dark:text-pink-400 hover:underline"
@@ -326,7 +326,7 @@ export default function AboutPage() {
                 <div className="flex flex-col md:flex-row justify-between">
                   <div>
                     <motion.span 
-                      className="inline-block px-3 py-1.5 bg-gradient-to-r from-pink-100 to-violet-100 dark:from-pink-900/30 dark:to-violet-900/30 text-pink-800 dark:text-pink-300 text-xs font-medium rounded-full mb-4"
+                      className="inline-block px-3 py-1.5 bg-gradient-to-r from-pink-100 to-orange-100 dark:from-pink-900/30 dark:to-orange-900/30 text-pink-800 dark:text-pink-300 text-xs font-medium rounded-full mb-4"
                       whileHover={{ scale: 1.05 }}
                     >
                       {item.period}
@@ -356,7 +356,7 @@ export default function AboutPage() {
         >
           <div className="flex items-center gap-4 mb-12">
             <h2 className="text-3xl font-bold gradient-text">Work Experience</h2>
-            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30"></div>
+            <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30"></div>
             <Link 
               href="/experience" 
               className="text-sm flex items-center gap-1.5 text-pink-600 dark:text-pink-400 hover:underline"
@@ -381,11 +381,11 @@ export default function AboutPage() {
                 className="glass dark:glass-dark rounded-xl overflow-hidden shadow-sm relative"
               >
                 {/* Colored top border */}
-                <div className="h-1 w-full bg-gradient-to-r from-pink-500 to-violet-500"></div>
+                <div className="h-1 w-full bg-gradient-to-r from-pink-500 to-orange-500"></div>
                 
                 <div className="p-6">
                   {/* Decorative elements */}
-                  <div className="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-xl -z-10"></div>
+                  <div className="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-xl -z-10"></div>
                   
                   <div className="flex flex-col md:flex-row justify-between mb-4">
                     <div>
@@ -395,7 +395,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <motion.span 
-                        className="inline-block px-3 py-1.5 bg-gradient-to-r from-pink-100 to-violet-100 dark:from-pink-900/30 dark:to-violet-900/30 text-pink-800 dark:text-pink-300 text-xs font-medium rounded-full"
+                        className="inline-block px-3 py-1.5 bg-gradient-to-r from-pink-100 to-orange-100 dark:from-pink-900/30 dark:to-orange-900/30 text-pink-800 dark:text-pink-300 text-xs font-medium rounded-full"
                         whileHover={{ scale: 1.05 }}
                       >
                         {item.period}
@@ -423,7 +423,7 @@ export default function AboutPage() {
         >
           {/* Decorative elements */}
           <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl"></div>
           
           <h2 className="text-3xl font-bold gradient-text mb-4">Ready to Collaborate?</h2>
           <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">

@@ -100,7 +100,7 @@ export default function ExperiencePage() {
               <h2 className="text-2xl md:text-3xl font-semibold">Work Experience</h2>
             </div>
 
-                          <div className="space-y-12 relative before:absolute before:inset-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-pink-400 before:via-violet-400 before:to-pink-400 before:left-7 before:-translate-x-1/2 pl-14 md:pl-16">
+                          <div className="space-y-12 relative before:absolute before:inset-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-pink-400 before:via-orange-400 before:to-pink-400 before:left-7 before:-translate-x-1/2 pl-14 md:pl-16">
               {workExperience.map((job, index) => (
                 <motion.div
                   key={index}
@@ -210,7 +210,7 @@ export default function ExperiencePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="mt-20 mb-20 text-center bg-gradient-to-r from-pink-50 to-violet-50 dark:from-pink-900/20 dark:to-violet-900/20 rounded-xl p-8 border border-pink-100 dark:border-pink-900/30 shadow-lg"
+            className="mt-20 mb-20 text-center bg-gradient-to-r from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 rounded-xl p-8 border border-pink-100 dark:border-pink-900/30 shadow-lg"
           >
             <h2 className="text-2xl font-semibold mb-4">Want to know more?</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-lg mx-auto">

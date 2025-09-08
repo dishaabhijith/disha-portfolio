@@ -74,7 +74,7 @@ export default function Navbar() {
                   >
                     <span className="relative z-10">{item.name}</span>
                     <span 
-                      className={`absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-pink-600 to-violet-600 transform origin-left transition-transform duration-300 rounded-full ${
+                      className={`absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-pink-600 to-orange-600 transform origin-left transition-transform duration-300 rounded-full ${
                         pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                       }`}
                     />
@@ -114,7 +114,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-600 to-violet-600 text-white font-medium shadow-md hover:shadow-lg transition-all text-sm flex items-center space-x-1"
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-600 to-orange-600 text-white font-medium shadow-md hover:shadow-lg transition-all text-sm flex items-center space-x-1"
             >
               <span>Resume</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -172,7 +172,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-600 to-violet-600 text-white font-medium shadow-md text-xs flex items-center"
+              className="px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-600 to-orange-600 text-white font-medium shadow-md text-xs flex items-center"
             >
               <span>Resume</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

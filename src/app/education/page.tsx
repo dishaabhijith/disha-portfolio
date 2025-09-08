@@ -219,7 +219,7 @@ export default function EducationPage() {
   const tabContent = {
     education: (
       <motion.div 
-        className="space-y-12 relative before:absolute before:inset-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-pink-400 before:via-violet-400 before:to-pink-400 before:left-6 before:-translate-x-1/2 before:opacity-60 pl-12 md:pl-16"
+        className="space-y-12 relative before:absolute before:inset-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-pink-400 before:via-orange-400 before:to-pink-400 before:left-6 before:-translate-x-1/2 before:opacity-60 pl-12 md:pl-16"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
@@ -233,7 +233,7 @@ export default function EducationPage() {
           >
             {/* Timeline dot with animation */}
             <motion.div 
-              className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1 w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 border-4 border-white dark:border-gray-900 z-10"
+              className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1 w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 border-4 border-white dark:border-gray-900 z-10"
               initial={{ scale: 0 }}
               animate={{ scale: [0, 1.2, 1] }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -249,7 +249,7 @@ export default function EducationPage() {
               <div className="p-6 relative overflow-hidden">
                 {/* Background decoration */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl -z-10"></div>
-                <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl -z-10"></div>
+                <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl -z-10"></div>
                 
                 <div className="flex flex-col md:flex-row md:justify-between mb-4 relative z-10">
                   <div>
@@ -281,7 +281,7 @@ export default function EducationPage() {
                       <motion.span
                         key={i}
                         whileHover={{ y: -2, scale: 1.05 }}
-                        className="px-3 py-1 bg-gradient-to-r from-pink-50 to-violet-50 dark:from-pink-900/20 dark:to-violet-900/20 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-pink-100/50 dark:border-pink-800/30"
+                        className="px-3 py-1 bg-gradient-to-r from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 text-gray-700 dark:text-gray-300 text-xs rounded-full border border-pink-100/50 dark:border-pink-800/30"
                       >
                         {course}
                       </motion.span>
@@ -311,11 +311,11 @@ export default function EducationPage() {
             <div className="relative p-6">
               {/* Background decoration */}
               <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-pink-500/5 dark:bg-pink-500/10 blur-3xl -z-10"></div>
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-3xl -z-10"></div>
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-orange-500/5 dark:bg-orange-500/10 blur-3xl -z-10"></div>
               
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-600">{category.name}</h3>
-                <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-violet-200 dark:from-pink-700/30 dark:to-violet-700/30 opacity-70"></div>
+                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-600">{category.name}</h3>
+                <div className="h-px flex-grow bg-gradient-to-r from-pink-200 to-orange-200 dark:from-pink-700/30 dark:to-orange-700/30 opacity-70"></div>
               </div>
               
               <div className="space-y-6">
@@ -330,7 +330,7 @@ export default function EducationPage() {
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.level}%` }}
                         transition={{ duration: 1.5, delay: 0.2 + i * 0.1, ease: "easeOut" }}
-                        className="h-full rounded-full bg-gradient-to-r from-pink-500 to-violet-500 relative"
+                        className="h-full rounded-full bg-gradient-to-r from-pink-500 to-orange-500 relative"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent animate-shimmer bg-shimmer bg-[length:200%_100%]"></div>
                       </motion.div>
@@ -433,7 +433,7 @@ export default function EducationPage() {
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-48 -left-48 w-96 h-96 rounded-full bg-pink-100/50 dark:bg-pink-900/20 blur-3xl"></div>
-        <div className="absolute -bottom-48 -right-48 w-96 h-96 rounded-full bg-violet-100/50 dark:bg-violet-900/20 blur-3xl"></div>
+        <div className="absolute -bottom-48 -right-48 w-96 h-96 rounded-full bg-orange-100/50 dark:bg-orange-900/20 blur-3xl"></div>
       </div>
       
       <div className="max-w-6xl mx-auto">
@@ -469,7 +469,7 @@ export default function EducationPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-3 rounded-full text-sm font-medium flex items-center gap-2 transition-all duration-300 shadow-sm ${
                   activeTab === tab.id 
-                    ? 'bg-gradient-to-r from-pink-600 to-violet-600 text-white shadow-pink-500/20'
+                    ? 'bg-gradient-to-r from-pink-600 to-orange-600 text-white shadow-pink-500/20'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-100 dark:border-gray-700'
                 }`}
                 variants={tabVariants}
